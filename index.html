@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Decifros Completos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #0066cc;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #004999;
+    }
+  </style>
 </head>
 <body>
   <h1>Decifros Completos</h1>
   <p>Números: 1, 3 y 5</p>
+
+  <button onclick="mostrarMensaje()">¡Dame un mensaje!</button>
+
+  <script>
+    function mostrarMensaje() {
+      alert('¡Sigue aprendiendo y creando, Raúl!');
+    }
+  </script>
 </body>
 </html>
