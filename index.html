@@ -6,83 +6,72 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #d0e6ff, #ffffff);
+      background: #f4f6fc;
       color: #333;
       margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-      animation: fadeIn 1.2s ease-in-out;
+      padding: 20px;
+      text-align: center;
     }
 
-    h1 {
-      color: #0055aa;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      animation: floatIn 1s ease-in-out;
+    .robot-container {
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    p {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-      animation: floatIn 1.2s ease-in-out;
+    .robot-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
-    button {
+    .dialogo {
+      margin-top: 20px;
+      font-size: 1.4em;
+      background: #fff;
+      padding: 15px 25px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .btn {
+      margin-top: 20px;
       background-color: #0055aa;
       color: white;
       border: none;
       padding: 12px 24px;
-      cursor: pointer;
       font-size: 1em;
       border-radius: 8px;
-      transition: background-color 0.3s ease;
+      cursor: pointer;
     }
 
-    button:hover {
+    .btn:hover {
       background-color: #003d7a;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes floatIn {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
     }
   </style>
 </head>
 <body>
-  <h1>Decifros Completos</h1>
-  <p id="mensaje">Números: 1, 3 y 5</p>
-
-  <button onclick="mostrarMensaje()">¡Motívame!</button>
+  <div class="robot-container">
+    <img src="robot_pixar_rojo.png" alt="Robot Pixar Rojo" class="robot-img" />
+    <div class="dialogo" id="mensaje">¡Sigue creando, Raúl!</div>
+    <br />
+    <button class="btn" onclick="cambiarMensaje()">Que diga otra cosa</button>
+  </div>
 
   <script>
     const mensajes = [
-      "¡Tú puedes con todo, campeón! 💪",
-      "¡Sigue aprendiendo y creando, Raúl! 🚀",
-      "¡No pares hasta lograrlo! 🔥",
-      "¡Eres más fuerte de lo que crees! 🧠",
-      "¡Hoy es tu día, aprovéchalo! ☀️",
-      "¡A darle que es mole de olla! 😎"
+      "¡Sigue creando, Raúl! 🚀",
+      "¡Eres pura chispa, compa! 🔥",
+      "¡Nada te detiene! 💪",
+      "¡Decifra el mundo con estilo! 🧠",
+      "¡Tú puedes con todo, campeón! 😎",
+      "¡Lo que haces, vale mucho! ⭐"
     ];
 
-    function mostrarMensaje() {
-      const mensaje = mensajes[Math.floor(Math.random() * mensajes.length)];
-      document.getElementById("mensaje").textContent = mensaje;
+    function cambiarMensaje() {
+      const aleatorio = Math.floor(Math.random() * mensajes.length);
+      document.getElementById("mensaje").textContent = mensajes[aleatorio];
     }
   </script>
 </body>
