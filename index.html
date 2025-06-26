@@ -2,77 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Decifros Completos</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f6fc;
-      color: #333;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .robot-container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .robot-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .dialogo {
-      margin-top: 20px;
-      font-size: 1.4em;
-      background: #fff;
-      padding: 15px 25px;
-      border-radius: 20px;
-      display: inline-block;
-      box-shadow: 2px 4px 10px rgba(0,0,0,0.15);
-    }
-
-    .btn {
-      margin-top: 20px;
-      background-color: #0055aa;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1em;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #003d7a;
-    }
-  </style>
+  <title>Mi página con robot animado</title>
 </head>
 <body>
-  <div class="robot-container">
-    <img src="robot_pixar_rojo.png" alt="Robot Pixar Rojo" class="robot-img" />
-    <div class="dialogo" id="mensaje">¡Sigue creando, Raúl!</div>
-    <br />
-    <button class="btn" onclick="cambiarMensaje()">Que diga otra cosa</button>
-  </div>
 
-  <script>
-    const mensajes = [
-      "¡Sigue creando, Raúl! 🚀",
-      "¡Eres pura chispa, compa! 🔥",
-      "¡Nada te detiene! 💪",
-      "¡Decifra el mundo con estilo! 🧠",
-      "¡Tú puedes con todo, campeón! 😎",
-      "¡Lo que haces, vale mucho! ⭐"
-    ];
+  <h1>Bienvenido a mi página</h1>
 
-    function cambiarMensaje() {
-      const aleatorio = Math.floor(Math.random() * mensajes.length);
-      document.getElementById("mensaje").textContent = mensajes[aleatorio];
-    }
-  </script>
+  <!-- Imagen del robot animado -->
+  <img src="images/robot-pixar.gif" alt="Robot animado estilo Pixar" style="width:300px; height:auto;" />
+
 </body>
 </html>
