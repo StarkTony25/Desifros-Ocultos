@@ -5,42 +5,84 @@
   <title>Decifros Completos</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f8ff;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #d0e6ff, #ffffff);
       color: #333;
-      margin: 20px;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      animation: fadeIn 1.2s ease-in-out;
     }
+
     h1 {
-      color: #0066cc;
+      color: #0055aa;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      animation: floatIn 1s ease-in-out;
     }
+
     p {
-      font-size: 1.2em;
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      animation: floatIn 1.2s ease-in-out;
     }
+
     button {
-      background-color: #0066cc;
+      background-color: #0055aa;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 24px;
       cursor: pointer;
       font-size: 1em;
-      border-radius: 5px;
-      margin-top: 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
     }
+
     button:hover {
-      background-color: #FF0000;
+      background-color: #003d7a;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes floatIn {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Decifros Completos</h1>
-  <p>BIENVENIDOS AVENTUREROS</p>
+  <p id="mensaje">Números: 1, 3 y 5</p>
 
-  <button onclick="mostrarMensaje()">¡HAZME CLICK!</button>
+  <button onclick="mostrarMensaje()">¡Motívame!</button>
 
   <script>
+    const mensajes = [
+      "¡Tú puedes con todo, campeón! 💪",
+      "¡Sigue aprendiendo y creando, Raúl! 🚀",
+      "¡No pares hasta lograrlo! 🔥",
+      "¡Eres más fuerte de lo que crees! 🧠",
+      "¡Hoy es tu día, aprovéchalo! ☀️",
+      "¡A darle que es mole de olla! 😎"
+    ];
+
     function mostrarMensaje() {
-      alert('SIGAMOS DESCUBRIENDO');
+      const mensaje = mensajes[Math.floor(Math.random() * mensajes.length)];
+      document.getElementById("mensaje").textContent = mensaje;
     }
   </script>
 </body>
